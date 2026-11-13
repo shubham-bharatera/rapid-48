@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   CSS Variables & Base Theme Tokens
+   ========================================================================== */
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-dark: #070a12;
+  --surface-dark: #0f172a;
+  --border-dark: #1e293b;
+  --teal-glow: rgba(20, 184, 166, 0.25);
+  --cyan-glow: rgba(6, 182, 212, 0.2);
+}
+
+/* ==========================================================================
+   Base Resets & Typography
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #e2e8f0;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  selection-background-color: #14b8a6;
+  selection-color: #042f2e;
+}
+
+::selection {
+  background-color: #2dd4bf;
+  color: #042f2e;
+}
+
+/* ==========================================================================
+   Custom Glassmorphic Cards & Glowing Gradients
+   ========================================================================== */
+.glow-radial {
+  background: radial-gradient(circle at 50% 15%, rgba(20, 184, 166, 0.16) 0%, rgba(14, 165, 233, 0.08) 45%, transparent 75%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 25%, #5eead4 75%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-highlight {
+  background: linear-gradient(180deg, rgba(20, 184, 166, 0.08) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(20, 184, 166, 0.15);
+}
+
+.badge-glow {
+  box-shadow: 0 0 25px -4px rgba(20, 184, 166, 0.35);
+}
+
+/* ==========================================================================
+   Custom Range Slider Styling (Runway Savings Calculator)
+   ========================================================================== */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2dd4bf;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px rgba(45, 212, 191, 0.8);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background: #2dd4bf;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(45, 212, 191, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* ==========================================================================
+   Minimal Dark Scrollbar
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 2px solid #070a12;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ==========================================================================
+   Accessibility & Motion
+   ========================================================================== */
+:focus-visible {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

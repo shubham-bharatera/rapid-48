@@ -1,0 +1,6 @@
+{"timestamp":"00:00:00.537","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:05.037","source":"Server","level":"WARN","message":"⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using \"http://localhost:3000\". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase"}
+{"timestamp":"00:00:05.362","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"02:08:54.713","source":"Server","level":"LOG","message":"✓ Compiled in 575ms"}
+{"timestamp":"02:09:35.536","source":"Server","level":"LOG","message":"✓ Compiled in 816ms"}
+{"timestamp":"02:09:44.603","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
